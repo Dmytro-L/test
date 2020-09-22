@@ -20,18 +20,22 @@ body {
         padding-left: 20px;
         padding-right: 20px;
         border: 1px solid $form-border;
+        transition: all 0.5s;
         
         
     }
     input:focus,textarea:focus{
         outline: 0;
         border: 3px solid $form-border;
+        transition: all 0.5s;
         
         }
     button:hover,a:hover{
+        opacity: .8;
+        transition: all 0.5s;
+    }
+    button,a{
         outline: 0;
-        opacity: .6;
-
     }
 
 }
@@ -99,6 +103,7 @@ header{
             font-size: $fs15;
             padding: 13px 65px;
             background-color: $maincolor;
+            transition: all 0.5s;
                 }
             }
 }
@@ -208,6 +213,7 @@ footer{
             border: none;
             float: right;
             @extend %buttons;
+            transition: all 0.5s;
         }
     }
 }
@@ -268,6 +274,7 @@ footer{
             a{
             @extend %buttons;
             font-weight: 300;
+            transition: all 0.5s;
             }
         }
     }
