@@ -3,17 +3,22 @@
 body{
     width: 100%;
     min-height: 100vh;
-    display: flex;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    & * {
+        box-sizing: border-box;
+    }
     textarea,button:focus{
         outline: 0;
     }
 
 }
 .wrapper{
+    display: flex;
+    height: 100vh;
+.container{
     margin: auto;
+
 
 
 
@@ -23,6 +28,7 @@ H2{
     font-weight: 200;
     margin-bottom: 20px;
     margin-top: 0;
+}
 }
 .main {
     margin: auto;
@@ -97,16 +103,21 @@ H2{
     }
 }
 }
-.wrapper-extand {
+.wrapper-expand {
     position: relative;
     width: 100%;
     background-color: rgb(12, 100, 27);
     opacity: 0.7;
+    height: 100vh;
+    .container{
+        height: 100%;
+    }
     H2{
         display: none;
     }
 
 .main {
+    height: 100%;
 
 		// .main__top
 
@@ -149,23 +160,23 @@ H2{
 		&__textarea {
             text-align: center;
             height: 100%;
+            padding: 15px 0;
             textarea{
-                height: 94vh;
+                height: 100%;
+                max-width: 600px;
                 width: 600px;
-                border-radius: 25px;
-                margin: 2vh 0;
-                padding-top: 10px;
-                padding-left: 20px;
+                border-radius: 10px;
+                padding: 10px 20px;
                 
             }
         }
         @media(max-width:376px){
             &__textarea {
                 max-width:  100%;
-                
+                padding: 25px 0;
                 textarea{
                     width: 100%;
-                    margin: 5vh 0;
+                    
                 }
             }
         }
