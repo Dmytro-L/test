@@ -8,239 +8,266 @@
     padding: 10px 74px;
     background-color:$maincolor;
 }
-body * {
-    box-sizing: border-box;
-    input,a,textarea,button:focus{
-        outline: 0;
-        
 
+body {
+    font-family: $sf;
+    margin: 0;
+
+    *{
+        box-sizing: border-box;
     }
     input,textarea{
         padding-left: 20px;
+        padding-right: 20px;
+        border: 1px solid $form-border;
+        
+        
+    }
+    input:focus,textarea:focus{
+        outline: 0;
+        border: 3px solid $form-border;
+        
+        }
+    button:hover,a:hover{
+        outline: 0;
+        opacity: .6;
+
+    }
+
+}
+
+header{
+    background-image: url(../img/header_background_v1.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    position: relative;
+    
+    .top-wrapper{
+        display: flex;
+        justify-content: space-between;
+                
+        .logo{
+            width: 230px;
+            height: 150px;
+                    
+            img{
+                display: block;
+                max-width: 100%;
+                max-height: 100%;
+                    }
+                }
+        nav{
+            font-size: 0;
+
+            a{
+                display: inline-block;
+                font-size: $fs15;
+                text-decoration: none;
+                color: $white-color;
+                border-left: solid 2px  $line-color;
+                font-weight: 700;
+                text-transform: uppercase;
+                padding: 20px 114px;
+            }
+            a:nth-child(1){
+                border: none;
+                    }
+                }
+            }
+    section{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        height: 90px;
+        margin: auto;
+                
+        h1{
+            margin-top: 0;
+            color: $white-color;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: $fs24;
+            margin-bottom: 27px;
+            }
+        .btn{
+            color: $white-color;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: $fs15;
+            padding: 13px 65px;
+            background-color: $maincolor;
+                }
+            }
+}
+
+main{
+    max-width: 960px;
+    margin: 0 auto;
+
+    .toolbar{
+        text-align: right;
+        padding: 20px 10px 15px 0;
+
+        input{
+            border-radius: 0;
+            border: solid 1px $form-border;
+            padding: 10px 20px 10px 20px;
+            color: $placeholder-color;
+                }
+                input:focus{
+                    border: 1px solid black;
+                }
+            }
+    .about{
+        padding: 0 15px;
+            
+        h1{
+            text-align: right;
+            font-size: $fs24;
+            text-transform: uppercase;
+            padding-top: 41px;
+            margin-bottom: 0;
+        }
+        p{
+            font-size: $fs15;
+            margin: 0;
+            margin-bottom: 20px;
+            line-height: 24px;
+        }
+        img{
+            display: block;
+            max-width: 100%;
+        }
     }
 }
-body{
-    font-family: $sf;
-    margin: 0;
-    .main-wrapper{
-        header{
-            background-image: url(../img/header_background_v1.jpg);
-            min-height: 100vh;
-            background-size: cover;
+
+footer{
+
+    span{
+        display: block;
+        margin-top: 25px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        font-size: $fs15;
+        font-family: $sf;
+    }
+}
+
+.post-list{
+
+    h1{
+        text-align: right;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: $fs24;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    article{
+        background-color: $backG-post;
+        display: flex;
+        height: 322px;
+        margin-bottom: 20px;
+        padding-right: 20px;
+
+        img{
+            display: block;
+            padding: 10px;
+        }
+        .post{
             position: relative;
-            .top-wrapper{
-                display: flex;
-                justify-content: space-between;
-                .logo{
-                    width: 230px;
-                    height: 150px;
-                    img{
-                        display: block;
-                        width: 230px;
-                        height: 150px;
-                    }
-                }
-                nav{
-                    font-size: 0;
-                    a{
-                        display: inline-block;
-                        font-size: $fs15;
-                        text-decoration: none;
-                        color: $white-color;
-                        border-left: solid 2px  $line-color;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        padding: 20px 114px;
-                        
-                    }
-                    a:nth-child(1){
-                        border: none;
-                    }
-                }
-            }
-            section{
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                text-align: center;
-                height: 90px;
-                margin: auto;
-                
-                h1{
-                    margin-top: 0;
-                    color: $white-color;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    font-size: $fs24;
-                    margin-bottom: 27px;
-                }
-                .btn{
-                    
-                    color: $white-color;
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    font-size: $fs15;
-                    padding: 13px 65px;
-                    background-color: $maincolor;
-                }
-            }
-        }
-        main{
-            max-width: 960px;
-            margin: 0 auto;
-            .toolbar{
-                text-align: right;
-                padding: 20px 10px 15px 0;
-                input{
-                    border-radius: 0;
-                    border: solid 1px $form-border;
-                    padding: 10px 20px 10px 20px;
-                    color: $placeholder-color;
-                }
-            }
-            .post-list{
-                h1{
-                    text-align: right;
-                    margin: 0;
-                    text-transform: uppercase;
-                    font-size: $fs24;
-                    font-weight: 700;
-                    letter-spacing: 1px;
-                }
-                article{
-                    background-color: $backG-post;
-                    display: flex;
-                    height: 322px;
-                    margin-bottom: 20px;
-                    padding-right: 20px;
-                    img{
-                        display: block;
-                        padding: 10px;
-                        
-                    }
-                    .post{
-                        position: relative;
-                        .post-description{
-                            color:$red-color-post;
-                            font-size: $fs15;
-                            margin-top: 20px;
-                            margin-left: 5px;
-                        }
-                        h3{
-                            color:$maincolor;
-                            margin-top: 6px;
-                            padding-top: 6px;
-                            text-transform: uppercase;
-                            font-size: $fs15;
-                            letter-spacing: 0.2px;
-                            margin-bottom: 0;
-                            border-top: 2px solid $line-color;
-                        }
-                        p{
-                            margin: 0;
-                            margin-top: 2px;
-                            font-size: $fs15;
-                            line-height: 24px;
-                        }
-                    }
-                    .btn{
-                        margin-top: 22px;
-                        border: none;
-                        float: right;
-                        @extend %buttons;
-                    }
-                }
-            }
-            .about{
-                padding: 0 15px;
-                h1{
-                    text-align: right;
-                    font-size: $fs24;
-                    text-transform: uppercase;
-                    padding-top: 41px;
-                    margin-bottom: 0;
-                    }
-                p{
-                    font-size: $fs15;
-                    margin: 0;
-                    margin-bottom: 20px;
-                    line-height: 24px;
-                }
-                img{
-                    display: block;
-                    max-width: 100%;
-                }
-            }
-            .contact-form{
-                h1{
-                    text-align: right;
-                    text-transform: uppercase;
-                    font-size: $fs24;
-                    margin-top: 60px;
-                    margin-bottom: 0;
-                }
-                h4{
-                    text-align: right;
-                    text-transform: uppercase;
-                    font-size: $fs15;
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    letter-spacing: 0.65px;
-                }
-                .form{
-                    padding-top: 27px;
-                    .input-text{
-                        margin-top: 0;
-                        margin-bottom: 0;
-                        text-align: right;
-                        color: $maincolor;
-                        font-weight: 300;
-                    }
-                    .inputs{
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        
-                            input{
-                                width: 100%;
-                                margin-top: 2px;
-                                height: 44px;
-                                border: solid 1px $form-border;
-                            }
-                            .left-input,.right-input{
-                                width: 49%;
-                        }
-                    }
-                    .question-field{
-                        margin-top: 24px;
-                        textarea{
-                            padding-top: 10px;
-                            width: 958px;
-                            height: 115px;
-                            border: solid 1px $form-border;
-                        }
-                    }
-                    .send{
-                        text-align: right;
-                        margin-top: 25px;
-                        a{
-                        @extend %buttons;
-                        font-weight: 300;
-                        }
-                    }
-                }
-            }
-        }
-        footer{
-            span{
-                display: block;
-                margin-top: 25px;
-                margin-left: 15px;
-                margin-bottom: 15px;
+
+            .post-description{
+                color:$red-color-post;
                 font-size: $fs15;
-                font-family: $sf;
+                margin-top: 20px;
+                margin-left: 5px;
+            }
+            h3{
+                color:$maincolor;
+                margin-top: 6px;
+                padding-top: 6px;
+                text-transform: uppercase;
+                font-size: $fs15;
+                letter-spacing: 0.2px;
+                margin-bottom: 0;
+                border-top: 2px solid $line-color;
+            }
+            p{
+                margin: 0;
+                margin-top: 2px;
+                font-size: $fs15;
+                line-height: 24px;
+            }
+        }
+        .btn{
+            margin-top: 22px;
+            border: none;
+            float: right;
+            @extend %buttons;
+        }
+    }
+}
+
+.contact-form{
+    h1{
+        text-align: right;
+        text-transform: uppercase;
+        font-size: $fs24;
+        margin-top: 60px;
+        margin-bottom: 0;
+    }
+    h4{
+        text-align: right;
+        text-transform: uppercase;
+        font-size: $fs15;
+        margin-top: 0;
+        margin-bottom: 0;
+        letter-spacing: 0.65px;
+    }
+    .form{
+        padding-top: 27px;
+        .input-text{
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: right;
+            color: $maincolor;
+            font-weight: 300;
+        }
+        .inputs{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+                input{
+                    width: 100%;
+                    margin-top: 2px;
+                    height: 44px;
+                }
+                .left-input,.right-input{
+                    width: 49%;
+            }
+        }
+        .question-field{
+            margin-top: 24px;
+            textarea{
+                padding-top: 10px;
+                max-width: 100%;
+                max-height: 115px;
+                width: 100%;
+                height: 115px;
+            }
+            
+        }
+        .send{
+            text-align: right;
+            margin-top: 25px;
+            a{
+            @extend %buttons;
+            font-weight: 300;
             }
         }
     }
