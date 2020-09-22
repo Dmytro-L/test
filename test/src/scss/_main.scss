@@ -8,6 +8,17 @@
     padding: 10px 74px;
     background-color:$maincolor;
 }
+body * {
+    box-sizing: border-box;
+    input,a,textarea,button:focus{
+        outline: 0;
+        
+
+    }
+    input,textarea{
+        padding-left: 20px;
+    }
+}
 body{
     font-family: $sf;
     margin: 0;
@@ -18,17 +29,21 @@ body{
             background-size: cover;
             position: relative;
             .top-wrapper{
+                display: flex;
+                justify-content: space-between;
                 .logo{
+                    width: 230px;
+                    height: 150px;
                     img{
                         display: block;
                         width: 230px;
+                        height: 150px;
                     }
                 }
                 nav{
-                    position: absolute;
-                    right: 0;
-                    top: 20px;
+                    font-size: 0;
                     a{
+                        display: inline-block;
                         font-size: $fs15;
                         text-decoration: none;
                         color: $white-color;
@@ -36,6 +51,7 @@ body{
                         font-weight: 700;
                         text-transform: uppercase;
                         padding: 20px 114px;
+                        
                     }
                     a:nth-child(1){
                         border: none;
@@ -44,17 +60,20 @@ body{
             }
             section{
                 position: absolute;
-                top: 50%;
-                left: 50%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
                 text-align: center;
-                margin-left: -286.79px;
-                margin-top: -47.455px;
+                height: 90px;
+                margin: auto;
+                
                 h1{
+                    margin-top: 0;
                     color: $white-color;
                     text-transform: uppercase;
                     font-weight: 600;
                     font-size: $fs24;
-                    letter-spacing: 0.4px;
                     margin-bottom: 27px;
                 }
                 .btn{
@@ -93,13 +112,13 @@ body{
                 article{
                     background-color: $backG-post;
                     display: flex;
-                    height: 302px;
+                    height: 322px;
                     margin-bottom: 20px;
                     padding-right: 20px;
                     img{
                         display: block;
                         padding: 10px;
-                        width: 282px;
+                        
                     }
                     .post{
                         position: relative;
@@ -109,36 +128,27 @@ body{
                             margin-top: 20px;
                             margin-left: 5px;
                         }
-                        .post-description:after{
-                            content: '';
-                            position: absolute;
-                            top: 20px;
-                            left: 0;
-                            width: 100%;
-                            height: 1px;
-                            background-color:  $line-color;
-                        }
                         h3{
                             color:$maincolor;
-                            margin-top: 15px;
+                            margin-top: 6px;
+                            padding-top: 6px;
                             text-transform: uppercase;
                             font-size: $fs15;
                             letter-spacing: 0.2px;
                             margin-bottom: 0;
+                            border-top: 2px solid $line-color;
                         }
                         p{
                             margin: 0;
                             margin-top: 2px;
-                            
                             font-size: $fs15;
                             line-height: 24px;
                         }
                     }
                     .btn{
-                        
-                        margin-left: 438px;
-                        margin-top: 21px;
+                        margin-top: 22px;
                         border: none;
+                        float: right;
                         @extend %buttons;
                     }
                 }
@@ -192,20 +202,22 @@ body{
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
-                        .left-input,.right-input{
-                            width: 49%;
+                        
                             input{
                                 width: 100%;
                                 margin-top: 2px;
                                 height: 44px;
                                 border: solid 1px $form-border;
                             }
+                            .left-input,.right-input{
+                                width: 49%;
                         }
                     }
                     .question-field{
                         margin-top: 24px;
                         textarea{
-                            width: 100%;
+                            padding-top: 10px;
+                            width: 958px;
                             height: 115px;
                             border: solid 1px $form-border;
                         }
@@ -213,7 +225,6 @@ body{
                     .send{
                         text-align: right;
                         margin-top: 25px;
-                        margin-right: -6px;
                         a{
                         @extend %buttons;
                         font-weight: 300;
