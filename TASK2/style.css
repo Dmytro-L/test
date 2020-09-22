@@ -9,6 +9,7 @@ body {
     outline: 0; }
 
 .wrapper {
+  transition: all 0.5s;
   display: flex;
   height: 100vh; }
   .wrapper .container {
@@ -77,6 +78,7 @@ body {
       width: 100%; } }
 
 .expanded {
+  transition: all 0.5s;
   position: relative;
   width: 100%;
   background-color: #0c641b;

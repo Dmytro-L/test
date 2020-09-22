@@ -13,6 +13,8 @@ body{
     }
 }
 .wrapper{
+    
+    transition: all 0.5s;
     display: flex;
     height: 100vh;
 .container{
@@ -116,6 +118,7 @@ H2{
 }
 }
 .expanded {
+    transition: all 0.5s;
     position: relative;
     width: 100%;
     background-color: rgb(12, 100, 27);
