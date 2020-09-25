@@ -183,7 +183,13 @@ body{
             font-style: italic;
             font-weight: normal;
             p{font-size: 13px;
-            line-height: 16px;}
+            line-height: 16px;
+            a{
+                color:blue;
+            }
+            a:hover{
+                color: rgb(252,142,1)
+            }}
 		}
 }
 footer{
@@ -193,6 +199,7 @@ footer{
         font-size: 15px;
         margin: 10px 0 20px 0;
         color: white;
+        
         
         
     }

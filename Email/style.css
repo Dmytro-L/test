@@ -110,6 +110,10 @@ body {
     .main__bottom p {
       font-size: 13px;
       line-height: 16px; }
+      .main__bottom p a {
+        color: blue; }
+      .main__bottom p a:hover {
+        color: #fc8e01; }
 
 footer p {
   text-align: center;
