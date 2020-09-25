@@ -1,5 +1,6 @@
 
 body{
+    background-color: whitesmoke;
     width: 770px;
     margin: 0 auto;
     & * {
@@ -12,6 +13,7 @@ body{
     
     position: relative;
     overflow: hidden;
+    
     
 }
 .wrapper:before{
