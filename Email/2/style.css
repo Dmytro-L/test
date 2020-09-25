@@ -1,7 +1,7 @@
 body {
-  background-color: whitesmoke;
   width: 770px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: whitesmoke; }
   body * {
     margin: 0;
     box-sizing: border-box; }
