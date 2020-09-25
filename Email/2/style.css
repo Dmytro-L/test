@@ -1,52 +1,125 @@
-/*
-Error: Invalid CSS after "...kground-color: ": expected expression (e.g. 1px, bold), was ";"
-        on line 15 of C:\Users\ABook\Downloads\test\Email\2\style.scss
+body {
+  background-color: whitesmoke;
+  width: 770px;
+  margin: 0 auto; }
+  body * {
+    margin: 0;
+    box-sizing: border-box; }
 
-10: }
-11: .wrapper {
-12:     
-13:     position: relative;
-14:     overflow: hidden;
-15:     background-color: ;
-16:     
-17: }
-18: .wrapper:before{
-19:     content: '';
-20:     position: absolute;
+.wrapper {
+  position: relative;
+  overflow: hidden; }
 
-Backtrace:
-C:\Users\ABook\Downloads\test\Email\2\style.scss:15
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/lexer.rb:231:in `expected!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:723:in `assert_expr'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:68:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1134:in `sass_script'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:988:in `value!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:796:in `block in try_declaration'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `call'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `rethrow'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:809:in `try_declaration'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:22:in `load'
-C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...kground-color: \": expected expression (e.g. 1px, bold), was \";\"\A         on line 15 of C:\Users\ABook\Downloads\test\Email\2\style.scss\A \A 10: }\A 11: .wrapper {\A 12:     \A 13:     position: relative;\A 14:     overflow: hidden;\A 15:     background-color: ;\A 16:     \A 17: }\A 18: .wrapper:before{\A 19:     content: '';\A 20:     position: absolute;"; }
+.wrapper:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 250%;
+  left: -200px;
+  top: -28.5%;
+  height: 340px;
+  background-color: #fc8e01;
+  transform: rotate(-26deg); }
+
+.wrapper:after {
+  content: '';
+  position: absolute;
+  background-image: url("hintergrund_1.png");
+  background-repeat: no-repeat;
+  bottom: -178px;
+  width: 100%;
+  height: 100%;
+  background-position: bottom;
+  z-index: -1; }
+
+.container {
+  width: 660px;
+  margin: 0 auto; }
+
+.header {
+  margin-top: 50px; }
+  .header__top {
+    display: flex;
+    color: white;
+    align-items: center; }
+  .header__logo {
+    font-family: sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    text-shadow: #383838 -7px 5px 4px;
+    margin: 0; }
+  .header__bottom-text {
+    margin-top: 40px;
+    text-align: left;
+    font-size: 22px;
+    color: white;
+    text-shadow: #383838 -7px 5px 4px;
+    margin-bottom: 10px; }
+
+.header__text {
+  margin-left: 15px; }
+  .header__text .up {
+    font-size: 18px;
+    letter-spacing: 1px; }
+  .header__text .down {
+    font-size: 14px; }
+
+.main {
+  background-color: white;
+  border: 3px solid #ffd7a3; }
+  .main__top {
+    display: flex; }
+  .main__text {
+    margin: 10px 0 0 10px;
+    font-size: 14px;
+    word-spacing: 16px;
+    line-height: 20px;
+    color: white; }
+  .main__logo {
+    margin: -70px -3px 0 0; }
+  .main__block {
+    display: flex;
+    margin-bottom: 20px; }
+  .main__middle H2 {
+    display: none; }
+  .main__middle p {
+    font-size: 14px;
+    line-height: 17px; }
+    .main__middle p span {
+      margin-left: 71px; }
+  .main__middle H3 {
+    font-weight: 700; }
+  .main__first-block {
+    width: 51%; }
+  .main__first-block.left {
+    margin: 10px 0 10px 10px; }
+  .main__first-block.right {
+    margin: 10px 10px 10px 0; }
+  .main__photo {
+    display: block;
+    width: 100%; }
+  .main__text-first {
+    margin: 10px;
+    width: 50%; }
+    .main__text-first h3 {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+  .main__bottom {
+    margin: 10px;
+    font-style: italic;
+    font-weight: normal; }
+    .main__bottom p {
+      font-size: 13px;
+      line-height: 16px; }
+      .main__bottom p a {
+        color: blue; }
+      .main__bottom p a:hover {
+        color: #fc8e01; }
+
+footer p {
+  text-align: center;
+  font-size: 15px;
+  margin: 10px 0 20px 0;
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */
