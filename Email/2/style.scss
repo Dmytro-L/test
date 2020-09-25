@@ -112,6 +112,7 @@ body{
             font-size: 14px;
             word-spacing: 16px;
             line-height: 20px;
+            color: white;
 		}
 
 		// .main__logo
@@ -127,13 +128,11 @@ body{
         }
 		&__middle {
             H2{
-                font-size: 18px;
-                text-align: center;
-                margin-top: 20px;
-                margin-bottom: 10px;
+                display: none;
+                
             }
             p{
-                font-size: 16px;
+                font-size: 14px;
                 line-height: 17px;
                 span{
                     margin-left: 71px;
