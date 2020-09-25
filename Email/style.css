@@ -4,11 +4,6 @@ body {
   body * {
     margin: 0;
     box-sizing: border-box; }
-    body * a:hover {
-      scale: 1.2;
-      transition: all 2s; }
-    body * a {
-      transition: all 2s; }
 
 .wrapper {
   position: relative;
